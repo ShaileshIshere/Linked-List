@@ -87,7 +87,7 @@ int main() {
     
     /*
     removal from [head]
-    enter the no. of nodes to create a linked list : 
+    enter the no. of nodes to create a linked list : 5
     enter data : 10
     enter data : 20
     enter data : 30
@@ -98,7 +98,7 @@ int main() {
     printing linked list after removal : 20 -> 30 -> 40 -> 50 -> nullptr
 
     removal from [tail]
-    enter the no. of nodes to create a linked list : 
+    enter the no. of nodes to create a linked list : 5
     enter data : 10
     enter data : 20
     enter data : 30
@@ -109,7 +109,7 @@ int main() {
     printing linked list after removal : 10 -> 20 -> 30 -> 40 -> nullptr
 
     removal from [middle]
-    enter the no. of nodes to create a linked list : 
+    enter the no. of nodes to create a linked list : 5
     enter data : 10
     enter data : 20
     enter data : 30

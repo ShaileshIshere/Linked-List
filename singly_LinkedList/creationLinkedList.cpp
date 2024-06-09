@@ -75,7 +75,7 @@ int main() {
     printLinkedList(head);
 
     /*
-    enter the no. of nodes to create a linked list : 
+    enter the no. of nodes to create a linked list : 5
     enter data : 10
     enter data : 20
     enter data : 30

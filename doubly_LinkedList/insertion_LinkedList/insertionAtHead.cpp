@@ -2,33 +2,33 @@
 
 using namespace std;
 
-struct Node{
+struct Node {
     int data;
     Node* next;
+    Node* prev;
 
-    Node(int val) : data(val), next(nullptr) {}
+    Node(int val) : data(val), next(nullptr), prev(nullptr) {}
 };
 
-// here the inertion will proceeds at the tail of a linked list
-void insertionAtTail(Node* &head, Node* &tail, int data) {
+// here the isertion will proceeds at the head of the linked list
+void insertionAtHead(Node* &head, Node* &tail, int data) {
     Node* newNode = new Node(data);
     if(!head) 
         head = tail = newNode;
     else {
-        tail->next = newNode;
-        tail = newNode;
+        head->prev = newNode;
+        newNode->next = head;
+        head = newNode;
     }
 }
 
-// here the entire linked lsit will be printed according to the [head] node
-void printLinkedList(Node* head) {
+// here the entire linked lsit will be printed according to the head node
+void printDoublyLinkedList(Node* head) {
     Node* temp = head;
-
     while(temp) {
         cout << temp->data << " -> ";
         temp = temp->next;
     }
-
     cout << "nullptr" << endl;
 }
 
@@ -42,19 +42,19 @@ int main() {
     for(int i=0; i<count; ++i) {
         cout << "enter data : ";
         cin >> data;
-        insertionAtTail(head, tail, data);
+        insertionAtHead(head, tail, data);
     }
     cout << "printing the linked list according to your preference : " << endl;
-    printLinkedList(head);
+    printDoublyLinkedList(head);
 }
 
 
-/*
+/* 
 enter the no. of nodes you want to insert in the linked list : 5
 enter data : 10
 enter data : 20
 enter data : 30
 enter data : 40
 enter data : 50
-printing the linked list according to your preference : 10 -> 20 -> 30 -> 40 -> 50 -> nullptr
+printing the linked list according to your preference : 50 -> 40 -> 30 -> 20 -> 10 -> nullptr 
 */

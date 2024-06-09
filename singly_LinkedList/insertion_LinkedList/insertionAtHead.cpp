@@ -54,6 +54,5 @@ enter data : 20
 enter data : 30
 enter data : 40
 enter data : 50
-printing the linked list according to your preference : 
-50 -> 40 -> 30 -> 20 -> 10 -> nullptr 
+printing the linked list according to your preference : 50 -> 40 -> 30 -> 20 -> 10 -> nullptr 
 */

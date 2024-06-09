@@ -5,8 +5,9 @@ using namespace std;
 struct Node{
     int data;
     Node* next;
+    Node* prev;
 
-    Node(int val) : data(val), next(nullptr) {}
+    Node(int val) : data(val), next(nullptr), prev(nullptr) {}
 };
 
 // here the inertion will proceeds at the tail of a linked list
@@ -15,13 +16,14 @@ void insertionAtTail(Node* &head, Node* &tail, int data) {
     if(!head) 
         head = tail = newNode;
     else {
+        newNode->prev = tail;
         tail->next = newNode;
         tail = newNode;
     }
 }
 
 // here the entire linked lsit will be printed according to the [head] node
-void printLinkedList(Node* head) {
+void printDoublyLinkedList(Node* head) {
     Node* temp = head;
 
     while(temp) {
@@ -45,7 +47,7 @@ int main() {
         insertionAtTail(head, tail, data);
     }
     cout << "printing the linked list according to your preference : " << endl;
-    printLinkedList(head);
+    printDoublyLinkedList(head);
 }
 
 
